@@ -1,0 +1,79 @@
+.main {
+    min-height: 100vh;
+    flex: 1;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 88, 163);
+    padding: 2rem 5rem;
+    color: #ffffff;
+
+    .navigation {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: auto;
+        max-width: 25rem;
+
+        .logo {
+            background-image: url('../public/imgs/xido_bg.png');
+            background-repeat: no-repeat;
+            background-size: 88px 44px;
+            width: 88px;
+            height: 44px;
+        }
+    }
+
+    .content {
+        width: 100%;
+        max-width: 25rem;
+
+        .title {
+            font-size: 32px;
+            margin: 1rem 0px 0px;
+            font-family: Pretendard Variable Bold;
+
+            span {
+                color: rgb(251, 217, 20);
+            }
+        }
+
+        .description {
+            margin: 0;
+            padding: 1rem 0 0 0;
+            line-height: 22px;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        max-width: 25rem;
+        font-size: 11px;
+
+        .link {
+            font-family: Pretendard Variable Bold;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+.right {
+    width: 60%;
+}
+
+
+
+

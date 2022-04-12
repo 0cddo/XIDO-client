@@ -72,6 +72,112 @@
 
 .right {
     width: 60%;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    grid-column: 6 / 14;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    padding: 2rem 5rem;
+
+    .login {
+        padding: 1rem 0rem;
+        width: 28rem;
+
+        .formField {
+            display: block;
+            margin-bottom: 0 !important;
+
+            .inputWrap {
+                margin-bottom: 0.625rem;
+            }
+        }
+    }
+}
+
+.inputWrap {
+    position: relative;
+    display: block;
+    padding: 0;
+
+    input:not([type=range]) {
+        display: block;
+        width: 100%;
+        margin: 0;
+        outline: 0;
+        padding: 1.5rem 0 0.0625rem;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid #929292;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-transition: box-shadow .2s;
+        transition: box-shadow .2s;
+        font-size: 1rem;
+        line-height: 1.5;
+        box-sizing: border-box;
+    }
+
+    input[type=text]~label {
+        font-size: 1rem;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        -webkit-transform-origin: top left;
+        transform-origin: top left;
+        pointer-events: none;
+    }
+
+    label {
+        position: absolute;
+        top: 1.4375rem;
+
+    }
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    border: 0;
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: 1.42857;
+    padding: 0;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.btn, .btn .btnCopy {
+    justify-content: center;
+    align-items: center;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+
+.btnFilled, .btnTransactional {
+    height: 3.5rem;
+    background: #0058a3;
+    color: #fff;
+    border-radius: 40px;
+    padding: 0 2.5rem;
+}
+
+.loginBtn {
+    width: 100%;
+}
+
+.space {
+    height: 32px;
 }
 
 

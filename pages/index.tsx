@@ -8,6 +8,10 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import Navigation from './common/navigation';
 
+const handleSubmit = () => {
+  alert("!!");
+}
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -37,7 +41,32 @@ const Home: NextPage = () => {
             <Footer />
           </div>
           <div className={styles.right}>
-            Right
+            <div className={styles.login}>
+              <form onSubmit={handleSubmit}>
+                <div className={styles.formField}>
+                  <div className={styles.inputWrap}>
+                    <input type="text" name="userName" autoComplete='userName' placeholder='이메일 또는 확인된 휴대전화 번호'></input>
+                    {/* 
+                      <label>이메일 또는 확인된 휴대전화 번호</label>
+                    */}
+                  </div>
+                </div>
+                <div className={styles.formField}>
+                  <div className={styles.inputWrap}>
+                    <input type="text" name="password" autoComplete='password' placeholder='비밀번호'></input>
+                    {/* 
+                      <label>비밀번호</label>
+                    */}
+                  </div>
+                </div>
+                <div className={styles.space}></div>
+                <button type="submit" className={`${styles.btn} ${styles.btnTransactional} ${styles.loginBtn}`}>
+                  <span className={styles.btnCopy}>
+                    <span className={styles.btnLabel}>로그인</span>
+                  </span>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </main>
